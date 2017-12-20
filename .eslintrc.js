@@ -12,6 +12,9 @@ module.exports = {
             "error",
             4
         ],
+        "no-console": [
+            "warn"
+        ],
         "linebreak-style": [
             "error",
             "windows"

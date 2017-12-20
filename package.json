@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/thinkful-ei17/david-vernon-dec20#readme",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
     "uuid": "^3.1.0"
