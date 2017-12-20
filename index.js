@@ -1,24 +1,22 @@
 const express = require('express');
-const router = express.Router();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
 
+const blogPostRouter = require('./blogPostRouter.js');
 
 app.use(morgan('dev'));
 app.use(express.static('public')); // serve static files
 app.use(bodyParser.json()); // parse JSON body
 app.use(cors());
 
+app.use('/blog-posts', blogPostRouter);
 // Listening for: GET /items
-app.get('/items', (req, res) => {
-    const query = req.query; // ?name=buy%20milk ==> {name: "Buy Milk"}
-    const list = items.find(query);
-    res.json(list);
+app.get('/', (req, res) => {
+    res.send('Home');
 });
-
 
 
 app.use(function (req, res) {
